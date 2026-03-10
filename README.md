@@ -1,16 +1,29 @@
-# React + Vite
+#  Study vs Distraction Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A productivity tracker to monitor your study time vs procrastination time in real life.
 
-Currently, two official plugins are available:
+##  Live Demo
+[Click here to view](https://my-study-tracker-ten.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
+- Track study time and procrastination time in real time
+- Visual progress bar showing study vs distraction ratio
+- Daily verdict based on your performance
+- Session history saved locally
+- Toast notifications for feedback
+- Fully responsive on mobile
 
-## React Compiler
+##  Built With
+- React
+- Tailwind CSS
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Run Locally
+clone the project
+git clone https://github.com/anuradhasharma1/tracker.git
 
-## Expanding the ESLint configuration
+install dependencies
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+start the dev server
+npm run dev
