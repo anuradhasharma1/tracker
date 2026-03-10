@@ -2,12 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import ProgressBar from './ProgressBar'
 import useTimer from '../hooks/useTimer'
+import verdict from '../utils/verdict'
 
 const Tracker = () => {
     const [Study, setStudy] = useState(0)
     const [Lazy, setLazy] = useState(0)
     const [mode, setMode] = useState(null)
     const [paused, setpaused] = useState(false)
+    const verdictComment = verdict(Study, Lazy)
 
     useTimer(mode, paused, setStudy, setLazy);
 
@@ -60,9 +62,15 @@ const Tracker = () => {
 
                 <div className=' flex gap-6'>
                     <button onClick={showResult} className=' border border-gray-400 my-10 px-6 py-2 rounded-md cursor-pointer font-semibold'>ShowResult</button>
-                    <button className='border border-gray-400 my-10 px-8 py-2 rounded-md cursor-pointer font-semibold'>Reset Day</button>
+                    <button onClick={() => { setStudy(0); setLazy(0); setMode(null); setpaused(false); }} className='border border-gray-400 my-10 px-8 py-2 rounded-md cursor-pointer font-semibold'>Reset Day</button>
 
                 </div>
+                {verdictComment && (
+                    <div className="text-center mt-2">
+                        <span className="font-black text-lg tracking-wide">{verdictComment.tag}</span>
+                        <p className="text-sm text-gray-500 mt-1">{verdictComment.comment}</p>
+                    </div>
+                )}
             </div>
         </>
     )
