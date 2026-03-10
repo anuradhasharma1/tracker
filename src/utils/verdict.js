@@ -1,4 +1,3 @@
-import React from 'react'
 
 const verdict = (Study, Lazy) => {
     if (Study === 0 && Lazy === 0) return null;
