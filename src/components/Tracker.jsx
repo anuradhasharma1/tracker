@@ -29,7 +29,7 @@ const Tracker = () => {
             alert("Balanced Day , Not Bad!");
         }
         else {
-            alert("Go study Bro! Too Much Procastination ");
+            alert("Go study Bro! Too Much Procrastination ");
         }
     }
 
@@ -44,7 +44,7 @@ const Tracker = () => {
                     <ul className=' flex flex-col gap-2'>
 
                         <li className=' font-bold text-lg sm:text-xl text-green-500'> Study time : {formatTime(Study)}  </li>
-                        <li className=' font-bold text-lg sm:text-xl text-red-600 '>Prcocastination : {formatTime(Lazy)} </li>
+                        <li className=' font-bold text-lg sm:text-xl text-red-600 '>Procrastination : {formatTime(Lazy)} </li>
                     </ul>
                     <ProgressBar Study={Study} Lazy={Lazy} />
                 </div>
@@ -54,7 +54,7 @@ const Tracker = () => {
                         <img width={20} src="/cool.png" alt="h" />
                     </button>
                     <button onClick={() => { setMode("Lazy"); setpaused(false); }} className="bg-red-500 hover:bg-red-600 text-white px-4 sm:px-4 py-2 rounded-lg cursor-pointer flex items-center gap-2 text-sm sm:text-base">
-                        Procastinating
+                        Procrastinating
                         <img width={20} src="/emoji.png" alt="s" />
                     </button>
                     <button className="flex items-center justify-center px-3 py-2" onClick={() => setpaused(!paused)}><img className=' w-5 sm:w-6 cursor-pointer' src={paused ? "/play.png" : "/stop.png"} /></button>
